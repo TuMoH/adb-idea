@@ -53,7 +53,7 @@ if (!hasProperty('StudioCompilePath')) {
 intellij {
     version 'IC-15.0.5' // this value is not important, as long as you can compile
 
-    pluginName 'adb_idea'
+    pluginName 'adb_screenshot'
     updateSinceUntilBuild false
 
     intellij.alternativeIdePath = project.hasProperty("StudioRunPath") ? StudioRunPath : StudioCompilePath
