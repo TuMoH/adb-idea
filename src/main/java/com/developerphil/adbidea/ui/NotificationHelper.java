@@ -6,8 +6,8 @@ import com.intellij.notification.NotificationType;
 
 public class NotificationHelper {
 
-    private static final NotificationGroup INFO = NotificationGroup.logOnlyGroup("ADB Idea (Logging)");
-    private static final NotificationGroup ERRORS = NotificationGroup.balloonGroup("ADB Idea (Errors)");
+    private static final NotificationGroup INFO = NotificationGroup.balloonGroup("ADB Screenshot (Logging)");
+    private static final NotificationGroup ERRORS = NotificationGroup.balloonGroup("ADB Screenshot (Errors)");
     private static final NotificationListener NOOP_LISTENER = (notification, event) -> {
     };
 
@@ -20,7 +20,7 @@ public class NotificationHelper {
     }
 
     private static void sendNotification(String message, NotificationType notificationType, NotificationGroup notificationGroup) {
-        notificationGroup.createNotification("ADB IDEA", escapeString(message), notificationType, NOOP_LISTENER).notify(null);
+        notificationGroup.createNotification("ADB Screenshot", escapeString(message), notificationType, NOOP_LISTENER).notify(null);
     }
 
 

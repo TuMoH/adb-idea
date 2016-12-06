@@ -23,13 +23,14 @@ public class ScreenshotCommand implements Command {
             BufferedImage image = bufferedImageFrom(rawImage);
 
             String folder = System.getProperty("user.home") + "/Pictures";
-            String name = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new Date()) + ".png";
+            String date = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new Date());
+            String name = device.getName() + "_" + date + ".png";
             ImageIO.write(image, "png", new File(folder, name));
 
-            info(String.format("Screenshot from %s saved: %s", device.getName(), name));
+            info(String.format("Saved: %s", name));
             return true;
         } catch (Exception e) {
-            error("Screenshot fail... " + e.getMessage());
+            error("Fail... " + e.getMessage());
         }
         return false;
     }

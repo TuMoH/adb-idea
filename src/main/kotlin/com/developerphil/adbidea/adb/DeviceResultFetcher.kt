@@ -43,14 +43,14 @@ class DeviceResultFetcher constructor(private val project: Project, private val 
 
     private fun getFacet(facets: List<AndroidFacet>): AndroidFacet? {
         val facet: AndroidFacet?
-        if (facets.size > 1) {
-            facet = ModuleChooserDialogHelper.showDialogForFacets(project, facets)
-            if (facet == null) {
-                return null
-            }
-        } else {
+//        if (facets.size > 1) {
+//            facet = ModuleChooserDialogHelper.showDialogForFacets(project, facets)
+//            if (facet == null) {
+//                return null
+//            }
+//        } else {
             facet = facets[0]
-        }
+//        }
 
         return facet
     }
