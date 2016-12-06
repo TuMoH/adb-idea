@@ -1,4 +1,4 @@
-<idea-plugin version="3" url="https://github.com/TuMoH/fast-screen-capture">
+<idea-plugin version="3" url="https://github.com/TuMoH/adb-screenshot">
     <id>com.timursoft.adbscreenshot</id>
     <name>ADB Screenshot</name>
     <version>1.0</version>
