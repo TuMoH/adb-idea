@@ -15,6 +15,10 @@ public class AdbFacade {
 
     private static final ExecutorService EXECUTOR = Executors.newCachedThreadPool(new ThreadFactoryBuilder().setNameFormat("AdbIdea-%d").build());
 
+    public static void screenshot(Project project) {
+        executeOnDevice(project, new ScreenshotCommand());
+    }
+
     public static void uninstall(Project project) {
         executeOnDevice(project, new UninstallCommand());
     }
